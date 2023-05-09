@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="User generation added">
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Old tests for new DataGenerator added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,16 +38,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_directory_selection": "/home/alexander/Documents/Java/patterns-task1/src/test/java",
-    "last_opened_file_path": "/home/alexander/Documents/Java/patterns-task1/artifacts"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/alexander/Documents/Java/patterns-task1/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alexander/Documents/Java/patterns-task1/artifacts&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/artifacts" />
@@ -134,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ChromeTest.shouldBookCardDeliveryHappyPath" />
         <item itemvalue="JAR Application.app-card-delivery.jar" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardDeliveryHappyPath" />
         <item itemvalue="Gradle.patterns-task1 [clean test]" />
         <item itemvalue="Gradle.patterns-task1 [clen test]" />
       </list>
@@ -171,37 +172,13 @@
       <option name="project" value="LOCAL" />
       <updated>1683656397088</updated>
     </task>
-    <task id="LOCAL-00004" summary="Name, phone and data generation tested.">
-      <created>1683665745922</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1683665745922</updated>
-    </task>
-    <task id="LOCAL-00005" summary="City generation added, Ё-problem found">
-      <created>1683666128071</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1683666128071</updated>
-    </task>
-    <task id="LOCAL-00006" summary="User generation added">
-      <created>1683666636405</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1683666636405</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Project files, SUT and configurations" />
     <MESSAGE value="Old tests for new DataGenerator added" />
-    <MESSAGE value="Name, phone and data generation tested." />
-    <MESSAGE value="City generation added, Ё-problem found" />
-    <MESSAGE value="User generation added" />
-    <option name="LAST_COMMIT_MESSAGE" value="User generation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Old tests for new DataGenerator added" />
   </component>
 </project>
