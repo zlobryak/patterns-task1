@@ -1,25 +1,30 @@
 package ru.netology.delivery.data;
 
-import lombok.Value;
 import com.github.javafaker.Faker;
 import lombok.Value;
-import lombok.val;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-import java.util.Random;
 
 public class DataGenerator {
     private DataGenerator() {
     }
 
-    public static String generateDate(int addDays, String pattern) {
-        // TODO: добавить логику для объявления переменной date
-        //  и задания её значения, для генерации строки с датой
-        // Вы можете использовать класс LocalDate и его методы
-        // для получения и форматирования даты
 
+    private static Faker faker;
+
+    static void setFaker() {
+        faker = new Faker(new Locale("ru"));
+    }
+
+
+    /**
+     * @param addDays How many days to shift
+     * @param pattern Format could be find in DateTimeFormatter.
+     *                For example dd.MM.yyyy will return xx.xx.xxxx
+     */
+    public static String generateDate(int addDays, String pattern) {
         return LocalDate.now()
                 .plusDays(addDays)
                 .format(DateTimeFormatter
@@ -31,21 +36,18 @@ public class DataGenerator {
         //  и задания её значения, генерацию можно выполнить
         // с помощью Faker, либо используя массив валидных
         // городов и класс Random
-        return city;
+       return null;
     }
 
     public static String generateName(String locale) {
-        // TODO: добавить логику для объявления переменной name
-        //  и задания её значения, для генерации можно
-        // использовать Faker
-        return name;
+        return String.valueOf(faker.name());
     }
 
     public static String generatePhone(String locale) {
         // TODO: добавить логику для объявления переменной phone
         //  и задания её значения, для генерации можно
         // использовать Faker
-        return phone;
+        return null;
     }
 
     public static class Registration {
@@ -56,7 +58,7 @@ public class DataGenerator {
             // TODO: добавить логику для создания пользователя user
             //  с использованием методов generateCity(locale),
             // generateName(locale), generatePhone(locale)
-            return user;
+            return null;
         }
     }
 

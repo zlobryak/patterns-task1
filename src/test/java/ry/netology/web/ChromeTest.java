@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.delivery.data.DataGenerator.generateDate;
+import static ru.netology.delivery.data.DataGenerator.generateName;
 
 public class ChromeTest {
     public String generateDateToSet(long addDays, String pattern) {
@@ -39,11 +40,11 @@ public class ChromeTest {
                         Keys.BACK_SPACE);
 
         block.$(".calendar-input input").setValue(dateToSet);
-        block.$("[data-test-id=name] input").setValue("Василий Пупкин");
+        block.$("[data-test-id=name] input").setValue(generateName("ru"));
         block.$("[data-test-id=phone] input").setValue("+79062421277");
 
         block.$(withText("соглашаюсь")).click();
-        block.$(withText("Забронировать")).click();
+        block.$(withText("Запланировать")).click();
 
         $(".notification__content")
                 .shouldHave(Condition.text(
@@ -71,7 +72,7 @@ public class ChromeTest {
         block.$("[data-test-id=phone] input").setValue("+79062421277");
 
         block.$(withText("соглашаюсь")).click();
-        block.$(withText("Забронировать")).click();
+        block.$(withText("Запланировать")).click();
 
         $("[data-test-id='date']")
                 .shouldHave(Condition.text(
@@ -97,7 +98,7 @@ public class ChromeTest {
         block.$("[data-test-id=phone] input").setValue("543");
 
         block.$(withText("соглашаюсь")).click();
-        block.$(withText("Забронировать")).click();
+        block.$(withText("Запланировать")).click();
 
         $("[data-test-id='phone'] ,input-sub")
                 .shouldHave(Condition.text(
@@ -123,7 +124,7 @@ public class ChromeTest {
         block.$("[data-test-id=phone] input").setValue("+79012345678");
 
         block.$(withText("соглашаюсь")).click();
-        block.$(withText("Забронировать")).click();
+        block.$(withText("Запланировать")).click();
 
         $("[data-test-id='name'] ,input-sub")
                 .shouldHave(Condition.text(
@@ -148,7 +149,7 @@ public class ChromeTest {
         block.$("[data-test-id=phone] input").setValue("+79012345678");
 
         block.$(withText("соглашаюсь")).click();
-        block.$(withText("Забронировать")).click();
+        block.$(withText("Запланировать")).click();
 
         $("[data-test-id='city'] ,input-sub")
                 .shouldHave(Condition.text(
