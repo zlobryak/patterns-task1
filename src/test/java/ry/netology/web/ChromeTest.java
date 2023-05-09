@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 import static ru.netology.delivery.data.DataGenerator.*;
+import static ru.netology.delivery.data.DataGenerator.Registration.generateUser;
 
 public class ChromeTest {
     // TODO Сделать проверку на букву ё
@@ -33,16 +34,17 @@ public class ChromeTest {
 
         open("http://localhost:9999/");
         SelenideElement block = $("fieldset");
-        block.$("[data-test-id=city] input").sendKeys(generateCity("ru"));
+        block.$("[data-test-id=city] input")
+                .sendKeys(generateUser("ru").getCity());
         $("[data-test-id='date'] input")
                 .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
                         Keys.BACK_SPACE);
         block.$(".calendar-input input")
                 .setValue(dateToSet);
         block.$("[data-test-id=name] input")
-                .setValue(generateName("ru"));
+                .setValue(generateUser("ru").getName());
         block.$("[data-test-id=phone] input")
-                .setValue(generatePhone("ru"));
+                .setValue(generateUser("ru").getPhone());
 
         block.$(withText("соглашаюсь")).click();
         block.$(withText("Запланировать")).click();

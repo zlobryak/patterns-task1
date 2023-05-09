@@ -10,10 +10,7 @@ import java.util.Locale;
 public class DataGenerator {
     private DataGenerator() {
     }
-
-
     private static Faker faker;
-
 
     /**
      * @param addDays How many days to shift
@@ -49,12 +46,12 @@ public class DataGenerator {
     public static class Registration {
         private Registration() {
         }
-
         public static UserInfo generateUser(String locale) {
-            // TODO: добавить логику для создания пользователя user
-            // с использованием методов generateCity(locale),
-            // generateName(locale), generatePhone(locale)
-            return null;
+            return new UserInfo(
+                    generateCity(locale),
+                    generateName(locale),
+                    generatePhone(locale)
+            );
         }
     }
 
