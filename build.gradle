@@ -11,7 +11,17 @@ repositories {
 
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation ('org.junit.jupiter:junit-jupiter')
+    testImplementation ('com.codeborne:selenide:6.12.2')
+
+    implementation('com.github.javafaker:javafaker:1.0.2')
+
+    implementation('org.projectlombok:lombok:1.18.24')
+    compileOnly('org.projectlombok:lombok:1.18.24')
+    annotationProcessor('org.projectlombok:lombok:1.18.20')
+
+    testCompileOnly('org.projectlombok:lombok:1.18.24')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.20')
 }
 
 test {
