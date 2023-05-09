@@ -32,7 +32,8 @@ public class DataGenerator {
         //  и задания её значения, генерацию можно выполнить
         // с помощью Faker, либо используя массив валидных
         // городов и класс Random
-        return null;
+        faker = new Faker(new Locale(locale));
+        return String.valueOf(faker.address().city());
     }
 
     public static String generateName(String locale) {
@@ -41,10 +42,8 @@ public class DataGenerator {
     }
 
     public static String generatePhone(String locale) {
-        // TODO: добавить логику для объявления переменной phone
-        //  и задания её значения, для генерации можно
         faker = new Faker(new Locale(locale));
-                return String.valueOf(faker.phoneNumber().phoneNumber());
+        return String.valueOf(faker.phoneNumber().phoneNumber());
     }
 
     public static class Registration {
@@ -53,7 +52,7 @@ public class DataGenerator {
 
         public static UserInfo generateUser(String locale) {
             // TODO: добавить логику для создания пользователя user
-            //  с использованием методов generateCity(locale),
+            // с использованием методов generateCity(locale),
             // generateName(locale), generatePhone(locale)
             return null;
         }

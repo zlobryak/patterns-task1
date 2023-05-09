@@ -18,6 +18,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.delivery.data.DataGenerator.*;
 
 public class ChromeTest {
+    // TODO Сделать проверку на букву ё
     public String generateDateToSet(long addDays, String pattern) {
         return LocalDate.now()
                 .plusDays(addDays)
@@ -32,7 +33,7 @@ public class ChromeTest {
 
         open("http://localhost:9999/");
         SelenideElement block = $("fieldset");
-        block.$("[data-test-id=city] input").sendKeys("Челябинск");
+        block.$("[data-test-id=city] input").sendKeys(generateCity("ru"));
         $("[data-test-id='date'] input")
                 .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
                         Keys.BACK_SPACE);
