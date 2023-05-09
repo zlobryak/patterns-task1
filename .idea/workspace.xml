@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="City generation added, Ё-problem found">
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="User generation added">
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +57,7 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ChromeTest.shouldBookCardDeliveryHappyPath">
+  <component name="RunManager" selected="Gradle.patterns-task1 [clean test]">
     <configuration name="ChromeTest.shouldBookCardDeliveryHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -186,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683666128071</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="User generation added">
+      <created>1683666636405</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683666636405</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,6 +201,7 @@
     <MESSAGE value="Old tests for new DataGenerator added" />
     <MESSAGE value="Name, phone and data generation tested." />
     <MESSAGE value="City generation added, Ё-problem found" />
-    <option name="LAST_COMMIT_MESSAGE" value="City generation added, Ё-problem found" />
+    <MESSAGE value="User generation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="User generation added" />
   </component>
 </project>
