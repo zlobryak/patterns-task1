@@ -2,8 +2,6 @@ package ry.netology.web;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.SelenideElement;
-
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -12,9 +10,8 @@ import java.time.Duration;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-
-import static ru.netology.delivery.data.DataGenerator.*;
 import static ru.netology.delivery.data.DataGenerator.Registration.generateUser;
+import static ru.netology.delivery.data.DataGenerator.generateDate;
 
 public class ChromeTest {
     // TODO Сделать проверку на букву ё
@@ -29,23 +26,24 @@ public class ChromeTest {
     void shouldBookCardDeliveryHappyPath() {
         Configuration.holdBrowserOpen = true;
         String dateToSet = generateDate(4, "dd.MM.yyyy");
+        String dateToReplan = generateDate(5, "dd.MM.yyyy");
 
         open("http://localhost:9999/");
-        SelenideElement block = $("fieldset");
-        block.$("[data-test-id=city] input")
+
+        $("[data-test-id=city] input")
                 .sendKeys(generateUser("ru").getCity());
         $("[data-test-id='date'] input")
                 .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
                         Keys.BACK_SPACE);
-        block.$(".calendar-input input")
-                .setValue(dateToSet);
-        block.$("[data-test-id=name] input")
+        $(".calendar-input input")
+                .setValue(dateToSet).sendKeys(Keys.ESCAPE);
+        $("[data-test-id=name] input")
                 .setValue(generateUser("ru").getName());
-        block.$("[data-test-id=phone] input")
+        $("[data-test-id=phone] input")
                 .setValue(generateUser("ru").getPhone());
 
-        block.$(withText("соглашаюсь")).click();
-        block.$(withText("Запланировать")).click();
+        $(withText("соглашаюсь")).click();
+        $(withText("Запланировать")).click();
 
         $(".notification__content")
                 .shouldHave(Condition.text(
@@ -53,6 +51,21 @@ public class ChromeTest {
                         Duration.ofSeconds(15)
                 )
                 .shouldBe(Condition.visible);
+
+        $("[data-test-id='date'] input")
+                .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
+                        Keys.BACK_SPACE);
+        $(".calendar-input input")
+                .setValue(dateToReplan).sendKeys(Keys.ESCAPE);
+        $(withText("Запланировать")).click();
+        $("[data-test-id=replan-notification] button").click();
+        $(".notification__content")
+                .shouldHave(Condition.text(
+                                "Встреча успешно запланирована на " + dateToReplan),
+                        Duration.ofSeconds(15)
+                )
+                .shouldBe(Condition.visible);
+
     }
 
 //    @Test
