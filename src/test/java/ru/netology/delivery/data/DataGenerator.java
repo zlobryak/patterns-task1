@@ -14,10 +14,6 @@ public class DataGenerator {
 
     private static Faker faker;
 
-    static void setFaker() {
-        faker = new Faker(new Locale("ru"));
-    }
-
 
     /**
      * @param addDays How many days to shift
@@ -36,18 +32,19 @@ public class DataGenerator {
         //  и задания её значения, генерацию можно выполнить
         // с помощью Faker, либо используя массив валидных
         // городов и класс Random
-       return null;
+        return null;
     }
 
     public static String generateName(String locale) {
-        return String.valueOf(faker.name());
+        faker = new Faker(new Locale(locale));
+        return String.valueOf(faker.name().fullName());
     }
 
     public static String generatePhone(String locale) {
         // TODO: добавить логику для объявления переменной phone
         //  и задания её значения, для генерации можно
-        // использовать Faker
-        return null;
+        faker = new Faker(new Locale(locale));
+                return String.valueOf(faker.phoneNumber().phoneNumber());
     }
 
     public static class Registration {

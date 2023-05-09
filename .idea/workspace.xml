@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Old tests for new DataGenerator added">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
     </list>
@@ -43,6 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "/home/alexander/Documents/Java/patterns-task1/src/test/java",
     "last_opened_file_path": "/home/alexander/Documents/Java/patterns-task1/artifacts"
   }
@@ -136,9 +139,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ChromeTest.shouldBookCardDeliveryHappyPath" />
+        <item itemvalue="JAR Application.app-card-delivery.jar" />
         <item itemvalue="Gradle.patterns-task1 [clean test]" />
         <item itemvalue="Gradle.patterns-task1 [clen test]" />
-        <item itemvalue="JAR Application.app-card-delivery.jar" />
       </list>
     </recent_temporary>
   </component>

@@ -3,9 +3,9 @@ package ry.netology.web;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-import ru.netology.delivery.data.DataGenerator;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -14,8 +14,8 @@ import java.time.format.DateTimeFormatter;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static ru.netology.delivery.data.DataGenerator.generateDate;
-import static ru.netology.delivery.data.DataGenerator.generateName;
+
+import static ru.netology.delivery.data.DataGenerator.*;
 
 public class ChromeTest {
     public String generateDateToSet(long addDays, String pattern) {
@@ -28,27 +28,27 @@ public class ChromeTest {
     @Test
     void shouldBookCardDeliveryHappyPath() {
         Configuration.holdBrowserOpen = true;
+        String dateToSet = generateDate(3, "dd.MM.yyyy");
+
         open("http://localhost:9999/");
         SelenideElement block = $("fieldset");
         block.$("[data-test-id=city] input").sendKeys("Челябинск");
-
-
-        String dateToSet = generateDate(3, "dd.MM.yyyy");
-
         $("[data-test-id='date'] input")
                 .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
                         Keys.BACK_SPACE);
-
-        block.$(".calendar-input input").setValue(dateToSet);
-        block.$("[data-test-id=name] input").setValue(generateName("ru"));
-        block.$("[data-test-id=phone] input").setValue("+79062421277");
+        block.$(".calendar-input input")
+                .setValue(dateToSet);
+        block.$("[data-test-id=name] input")
+                .setValue(generateName("ru"));
+        block.$("[data-test-id=phone] input")
+                .setValue(generatePhone("ru"));
 
         block.$(withText("соглашаюсь")).click();
         block.$(withText("Запланировать")).click();
 
         $(".notification__content")
                 .shouldHave(Condition.text(
-                                "Встреча успешно забронирована на " + dateToSet),
+                                "Встреча успешно запланирована на " + dateToSet),
                         Duration.ofSeconds(15)
                 )
                 .shouldBe(Condition.visible);
