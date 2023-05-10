@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Minimum requirements">
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Quick fix (apostrophe for [data-test-id='replan-notification'] button)">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +59,7 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.patterns-task1 [clean test]">
+  <component name="RunManager" selected="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath">
     <configuration name="ChromeTest.shouldBookCardDeliveryHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -72,6 +74,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardDeliveryHappyPath&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -134,8 +160,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.patterns-task1 [clean test]" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath" />
         <item itemvalue="Gradle.ChromeTest.shouldBookCardDeliveryHappyPath" />
+        <item itemvalue="Gradle.patterns-task1 [clean test]" />
         <item itemvalue="JAR Application.app-card-delivery.jar" />
         <item itemvalue="Gradle.patterns-task1 [clen test]" />
       </list>
@@ -192,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683674058785</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Quick fix (apostrophe for [data-test-id='replan-notification'] button)">
+      <created>1683710639559</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683710639560</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,6 +247,7 @@
     <MESSAGE value="Another dependencies fix" />
     <MESSAGE value="build.gradle fix" />
     <MESSAGE value="Minimum requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minimum requirements" />
+    <MESSAGE value="Quick fix (apostrophe for [data-test-id='replan-notification'] button)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick fix (apostrophe for [data-test-id='replan-notification'] button)" />
   </component>
 </project>

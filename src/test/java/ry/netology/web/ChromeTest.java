@@ -4,12 +4,15 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
+import ru.netology.delivery.data.AutoRegistration;
+import ru.netology.delivery.data.DataGenerator;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static ru.netology.delivery.data.DataGenerator.*;
 import static ru.netology.delivery.data.DataGenerator.Registration.generateUser;
 import static ru.netology.delivery.data.DataGenerator.generateDate;
 
@@ -68,7 +71,49 @@ public class ChromeTest {
 
     }
 
-//    @Test
+    @Test
+    void shouldBookCardWithRegistrationMethodHappyPath() {
+        Configuration.holdBrowserOpen = true;
+        int dateToSetShift = 4;
+        String dateToReplan = generateDate(5, "dd.MM.yyyy");
+        String city= "random";
+        String name = "random";
+        String phone = "random";
+        boolean agreement = true;
+
+        open("http://localhost:9999/");
+        AutoRegistration registration = new AutoRegistration();
+        registration.cityAutoFill(city);
+        registration.dateAutoFill(dateToSetShift);
+        registration.nameAotuFill(name);
+        registration.phoneAtoFill(phone);
+        registration.agreementAutoCheck(agreement);
+        registration.pushTheButton("Запланировать");
+
+
+        $(".notification__content")
+                .shouldHave(Condition.text(
+                                "Встреча успешно запланирована на " + generateDate(dateToSetShift, "dd.MM.yyyy")),
+                        Duration.ofSeconds(15)
+                )
+                .shouldBe(Condition.visible);
+
+        $("[data-test-id='date'] input")
+                .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
+                        Keys.BACK_SPACE);
+        $(".calendar-input input")
+                .setValue(dateToReplan).sendKeys(Keys.ESCAPE);
+        $(withText("Запланировать")).click();
+
+        registration.pushTheButton("Перепланировать");
+        $(".notification__content")
+                .shouldHave(Condition.text(
+                                "Встреча успешно запланирована на " + dateToReplan),
+                        Duration.ofSeconds(15)
+                )
+                .shouldBe(Condition.visible);
+    }
+    //    @Test
 //    void shouldBookCardDeliveryWrongDate() {
 //        open("http://localhost:9999/");
 //        SelenideElement block = $("fieldset");
