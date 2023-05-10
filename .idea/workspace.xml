@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Static modification added to methods in AutoRegistration.javagistration">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/ChromeTestBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeBotTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="New class containing all the methods for autoFill">
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/ChromeTestBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/ChromeTestBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683744976176</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="New class containing all the methods for autoFill">
+      <created>1683747289574</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683747289574</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -296,6 +299,7 @@
     <MESSAGE value="Working tests only" />
     <MESSAGE value="Filed build. Test for wrong phone name and name with &quot;Ё&quot; letter added." />
     <MESSAGE value="Static modification added to methods in AutoRegistration.javagistration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Static modification added to methods in AutoRegistration.javagistration" />
+    <MESSAGE value="New class containing all the methods for autoFill" />
+    <option name="LAST_COMMIT_MESSAGE" value="New class containing all the methods for autoFill" />
   </component>
 </project>
