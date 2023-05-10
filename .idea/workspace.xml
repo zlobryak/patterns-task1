@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Quick fix (apostrophe for [data-test-id='replan-notification'] button)">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" afterDir="false" />
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Old test replaced with new. Faker for random data.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;/home/alexander/Documents/Java/patterns-task1/src/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/alexander/Documents/Java/patterns-task1/artifacts&quot;
   }
@@ -161,9 +161,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath" />
+        <item itemvalue="JAR Application.app-card-delivery.jar" />
         <item itemvalue="Gradle.ChromeTest.shouldBookCardDeliveryHappyPath" />
         <item itemvalue="Gradle.patterns-task1 [clean test]" />
-        <item itemvalue="JAR Application.app-card-delivery.jar" />
         <item itemvalue="Gradle.patterns-task1 [clen test]" />
       </list>
     </recent_temporary>
@@ -198,56 +198,38 @@
       <option name="project" value="LOCAL" />
       <updated>1683656397088</updated>
     </task>
-    <task id="LOCAL-00004" summary="Another dependencies fix">
-      <created>1683670850658</created>
+    <task id="LOCAL-00004" summary="Name, phone and data generation tested.">
+      <created>1683665745922</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1683670850659</updated>
+      <updated>1683665745922</updated>
     </task>
-    <task id="LOCAL-00005" summary="build.gradle fix">
-      <created>1683671509317</created>
+    <task id="LOCAL-00005" summary="City generation added, Ё-problem found">
+      <created>1683666128071</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1683671509317</updated>
+      <updated>1683666128071</updated>
     </task>
-    <task id="LOCAL-00006" summary="Minimum requirements">
-      <created>1683674058785</created>
+    <task id="LOCAL-00006" summary="User generation added">
+      <created>1683666636405</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1683674058785</updated>
+      <updated>1683666636405</updated>
     </task>
-    <task id="LOCAL-00007" summary="Quick fix (apostrophe for [data-test-id='replan-notification'] button)">
-      <created>1683710639559</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1683710639560</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Project files, SUT and configurations" />
     <MESSAGE value="Old tests for new DataGenerator added" />
-    <MESSAGE value="Another dependencies fix" />
-    <MESSAGE value="build.gradle fix" />
-    <MESSAGE value="Minimum requirements" />
-    <MESSAGE value="Quick fix (apostrophe for [data-test-id='replan-notification'] button)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quick fix (apostrophe for [data-test-id='replan-notification'] button)" />
+    <MESSAGE value="Name, phone and data generation tested." />
+    <MESSAGE value="City generation added, Ё-problem found" />
+    <MESSAGE value="User generation added" />
+    <MESSAGE value="Old test replaced with new. Faker for random data." />
+    <option name="LAST_COMMIT_MESSAGE" value="Old test replaced with new. Faker for random data." />
   </component>
 </project>
