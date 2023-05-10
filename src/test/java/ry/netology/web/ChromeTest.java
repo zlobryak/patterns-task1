@@ -103,22 +103,6 @@ public class ChromeTest {
                 )
                 .shouldBe(Condition.visible);
     }
-//    @Test
-//    void shouldBookCardWithRegistrationMethodWrongPhone() {
-//        open("http://localhost:9999/");
-//        int dateToSetShift = 3;
-//        registration.cityAutoFill("random");
-//        registration.dateAutoFill(dateToSetShift);
-//        registration.nameAutoFill("random");
-//        registration.phoneAtoFill("111");
-//        registration.agreementAutoCheck(true);
-//        registration.pushTheButton("Запланировать");
-//        $("[data-test-id='name'] ,input-sub")
-//                .shouldHave(Condition.text(
-//                        "Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.")
-//                )
-//                .shouldBe(Condition.visible);
-//    }
     @Test
     void shouldBookCardWithRegistrationMethodWrongAgreement() {
         Configuration.holdBrowserOpen = true;
@@ -131,6 +115,42 @@ public class ChromeTest {
         registration.agreementAutoCheck(false);
         registration.pushTheButton("Запланировать");
         $(".input_invalid").shouldHave(cssValue("color", "rgba(255, 92, 92, 1)"));
+    }
+
+    // Тесты, которые выявили баги
+
+    @Test
+    void shouldBookCardWithRegistrationMethodWrongPhone() {
+        open("http://localhost:9999/");
+        int dateToSetShift = 3;
+        registration.cityAutoFill("random");
+        registration.dateAutoFill(dateToSetShift);
+        registration.nameAutoFill("random");
+        registration.phoneAtoFill("111");
+        registration.agreementAutoCheck(true);
+        registration.pushTheButton("Запланировать");
+        $("[data-test-id='phone'] ,input-sub")
+                .shouldHave(Condition.text(
+                        "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.")
+                )
+                .shouldBe(Condition.visible);
+    }
+    @Test
+    void shouldBookCardWithRegistrationMethodWrongLettersInTheName() {
+        open("http://localhost:9999/");
+        int dateToSetShift = 3;
+        registration.cityAutoFill("random");
+        String dateToSet = registration.dateAutoFill(dateToSetShift);
+        registration.nameAutoFill("Фёдор Фёдорович");
+        registration.phoneAtoFill("random");
+        registration.agreementAutoCheck(true);
+        registration.pushTheButton("Запланировать");
+        $(".notification__content")
+                .shouldHave(Condition.text(
+                                "Встреча успешно запланирована на " + dateToSet),
+                        Duration.ofSeconds(15)
+                )
+                .shouldBe(Condition.visible);
     }
 
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Some javadoc added">
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Working tests only">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
     </list>
@@ -68,7 +68,7 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement">
+  <component name="RunManager" selected="Gradle.patterns-task1 [clean test]">
     <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -93,7 +93,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongCity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongLettersInTheName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -106,31 +106,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodWrongCity&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongDate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodWrongDate&quot;" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodWrongLettersInTheName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -189,13 +165,36 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="patterns-task1 [clean test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement" />
+        <item itemvalue="Gradle.patterns-task1 [clean test]" />
         <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongPhone" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongLettersInTheName" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement" />
         <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongName" />
-        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongDate" />
-        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongCity" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683733152701</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Working tests only">
+      <created>1683735259381</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683735259381</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -269,6 +275,7 @@
     <MESSAGE value="User generation added" />
     <MESSAGE value="Old test replaced with new. Faker for random data." />
     <MESSAGE value="Some javadoc added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some javadoc added" />
+    <MESSAGE value="Working tests only" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working tests only" />
   </component>
 </project>
