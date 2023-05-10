@@ -15,7 +15,7 @@ public class AutoRegistration {
     /**
      * @param city Use String "random" to generate
      */
-    public void cityAutoFill(String city) {
+    public static void cityAutoFill(String city) {
         if (Objects.equals(city, "random")) {
 
             $("[data-test-id=city] input")
@@ -30,7 +30,7 @@ public class AutoRegistration {
      * @param dateToSetShift use int to shift from today
      * @return will return generated day for assertion
      */
-    public String dateAutoFill(int dateToSetShift) {
+    public static String dateAutoFill(int dateToSetShift) {
         $("[data-test-id='date'] input")
                 .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
                         Keys.BACK_SPACE);
@@ -43,7 +43,7 @@ public class AutoRegistration {
     /**
      * @param name Use String "random" to generate
      */
-    public void nameAutoFill(String name) {
+    public static void nameAutoFill(String name) {
         if (Objects.equals(name, "random")) {
             $("[data-test-id=name] input")
                     .setValue(generateUser("ru").getName());
@@ -56,7 +56,7 @@ public class AutoRegistration {
     /**
      * @param phone Use String "random" to generate
      */
-    public void phoneAtoFill(String phone) {
+    public static void phoneAtoFill(String phone) {
         if (Objects.equals(phone, "random")) {
             $("[data-test-id=phone] input")
                     .setValue(generateUser("ru").getPhone());
@@ -70,13 +70,13 @@ public class AutoRegistration {
      * @param agreement Use true or false To check the box,
      *                 or false not to tick
      */
-    public void agreementAutoCheck(boolean agreement) {
+    public static void agreementAutoCheck(boolean agreement) {
         if (agreement) {
             $(withText("соглашаюсь")).click();
         }
     }
 
-    public void pushTheButton(String buttonText){
+    public static void pushTheButton(String buttonText){
         $$(".button__text").findBy(Condition.text(buttonText)).click();
     }
 }

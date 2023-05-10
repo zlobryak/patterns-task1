@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Working tests only">
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Filed build. Test for wrong phone name and name with &quot;Ё&quot; letter added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,9 +191,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongLettersInTheName" />
         <item itemvalue="Gradle.patterns-task1 [clean test]" />
         <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongPhone" />
-        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongLettersInTheName" />
         <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement" />
         <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongName" />
       </list>
@@ -263,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683735259381</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Filed build. Test for wrong phone name and name with &quot;Ё&quot; letter added.">
+      <created>1683736558593</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683736558593</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -276,6 +284,7 @@
     <MESSAGE value="Old test replaced with new. Faker for random data." />
     <MESSAGE value="Some javadoc added" />
     <MESSAGE value="Working tests only" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working tests only" />
+    <MESSAGE value="Filed build. Test for wrong phone name and name with &quot;Ё&quot; letter added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Filed build. Test for wrong phone name and name with &quot;Ё&quot; letter added." />
   </component>
 </project>

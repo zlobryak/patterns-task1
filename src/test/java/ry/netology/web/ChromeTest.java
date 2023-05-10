@@ -14,7 +14,6 @@ import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.delivery.data.DataGenerator.generateDate;
 
 public class ChromeTest {
-    AutoRegistration registration = new AutoRegistration();
     // TODO Сделать проверку на букву ё
     @Test
     void shouldBookCardWithRegistrationMethodHappyPath() {
@@ -22,12 +21,12 @@ public class ChromeTest {
         int dateToSetShift = 4;
         String dateToReplan = generateDate(5, "dd.MM.yyyy");
         open("http://localhost:9999/");
-        registration.cityAutoFill("random");
-        String dateToSet = registration.dateAutoFill(dateToSetShift);
-        registration.nameAutoFill("random");
-        registration.phoneAtoFill("random");
-        registration.agreementAutoCheck(true);
-        registration.pushTheButton("Запланировать");
+        AutoRegistration.cityAutoFill("random");
+        String dateToSet = AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.nameAutoFill("random");
+        AutoRegistration.phoneAtoFill("random");
+        AutoRegistration.agreementAutoCheck(true);
+        AutoRegistration.pushTheButton("Запланировать");
 
         $(".notification__content")
                 .shouldHave(Condition.text(
@@ -42,8 +41,8 @@ public class ChromeTest {
         $(".calendar-input input")
                 .setValue(dateToReplan).sendKeys(Keys.ESCAPE);
 
-        registration.pushTheButton("Запланировать");
-        registration.pushTheButton("Перепланировать");
+        AutoRegistration.pushTheButton("Запланировать");
+        AutoRegistration.pushTheButton("Перепланировать");
 
         $(".notification__content")
                 .shouldHave(Condition.text(
@@ -58,12 +57,12 @@ public class ChromeTest {
         int dateToSetShift = 1;
         open("http://localhost:9999/");
 
-        registration.cityAutoFill("Мга");
-        registration.dateAutoFill(dateToSetShift);
-        registration.nameAutoFill("random");
-        registration.phoneAtoFill("random");
-        registration.agreementAutoCheck(true);
-        registration.pushTheButton("Запланировать");
+        AutoRegistration.cityAutoFill("Мга");
+        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.nameAutoFill("random");
+        AutoRegistration.phoneAtoFill("random");
+        AutoRegistration.agreementAutoCheck(true);
+        AutoRegistration.pushTheButton("Запланировать");
         $("[data-test-id='city'] ,input-sub")
                 .shouldHave(Condition.text(
                         "Доставка в выбранный город недоступна")
@@ -75,12 +74,12 @@ public class ChromeTest {
     void shouldBookCardWithRegistrationMethodWrongDate() {
         open("http://localhost:9999/");
         int dateToSetShift = 1;
-        registration.cityAutoFill("random");
-        registration.dateAutoFill(dateToSetShift);
-        registration.nameAutoFill("random");
-        registration.phoneAtoFill("random");
-        registration.agreementAutoCheck(true);
-        registration.pushTheButton("Запланировать");
+        AutoRegistration.cityAutoFill("random");
+        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.nameAutoFill("random");
+        AutoRegistration.phoneAtoFill("random");
+        AutoRegistration.agreementAutoCheck(true);
+        AutoRegistration.pushTheButton("Запланировать");
         $("[data-test-id='date']")
                 .shouldHave(Condition.text(
                         "Заказ на выбранную дату невозможен")
@@ -91,12 +90,12 @@ public class ChromeTest {
     void shouldBookCardWithRegistrationMethodWrongName() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
-        registration.cityAutoFill("random");
-        registration.dateAutoFill(dateToSetShift);
-        registration.nameAutoFill("111");
-        registration.phoneAtoFill("random");
-        registration.agreementAutoCheck(true);
-        registration.pushTheButton("Запланировать");
+        AutoRegistration.cityAutoFill("random");
+        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.nameAutoFill("111");
+        AutoRegistration.phoneAtoFill("random");
+        AutoRegistration.agreementAutoCheck(true);
+        AutoRegistration.pushTheButton("Запланировать");
         $("[data-test-id='name'] ,input-sub")
                 .shouldHave(Condition.text(
                         "Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.")
@@ -108,12 +107,12 @@ public class ChromeTest {
         Configuration.holdBrowserOpen = true;
         open("http://localhost:9999/");
         int dateToSetShift = 3;
-        registration.cityAutoFill("random");
-        registration.dateAutoFill(dateToSetShift);
-        registration.nameAutoFill("random");
-        registration.phoneAtoFill("111");
-        registration.agreementAutoCheck(false);
-        registration.pushTheButton("Запланировать");
+        AutoRegistration.cityAutoFill("random");
+        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.nameAutoFill("random");
+        AutoRegistration.phoneAtoFill("111");
+        AutoRegistration.agreementAutoCheck(false);
+        AutoRegistration.pushTheButton("Запланировать");
         $(".input_invalid").shouldHave(cssValue("color", "rgba(255, 92, 92, 1)"));
     }
 
@@ -123,12 +122,12 @@ public class ChromeTest {
     void shouldBookCardWithRegistrationMethodWrongPhone() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
-        registration.cityAutoFill("random");
-        registration.dateAutoFill(dateToSetShift);
-        registration.nameAutoFill("random");
-        registration.phoneAtoFill("111");
-        registration.agreementAutoCheck(true);
-        registration.pushTheButton("Запланировать");
+        AutoRegistration.cityAutoFill("random");
+        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.nameAutoFill("random");
+        AutoRegistration.phoneAtoFill("111");
+        AutoRegistration.agreementAutoCheck(true);
+        AutoRegistration.pushTheButton("Запланировать");
         $("[data-test-id='phone'] ,input-sub")
                 .shouldHave(Condition.text(
                         "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.")
@@ -139,12 +138,12 @@ public class ChromeTest {
     void shouldBookCardWithRegistrationMethodWrongLettersInTheName() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
-        registration.cityAutoFill("random");
-        String dateToSet = registration.dateAutoFill(dateToSetShift);
-        registration.nameAutoFill("Фёдор Фёдорович");
-        registration.phoneAtoFill("random");
-        registration.agreementAutoCheck(true);
-        registration.pushTheButton("Запланировать");
+        AutoRegistration.cityAutoFill("random");
+        String dateToSet = AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.nameAutoFill("Фёдор Фёдорович");
+        AutoRegistration.phoneAtoFill("random");
+        AutoRegistration.agreementAutoCheck(true);
+        AutoRegistration.pushTheButton("Запланировать");
         $(".notification__content")
                 .shouldHave(Condition.text(
                                 "Встреча успешно запланирована на " + dateToSet),
