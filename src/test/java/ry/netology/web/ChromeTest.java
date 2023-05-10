@@ -58,7 +58,7 @@ public class ChromeTest {
         $(".calendar-input input")
                 .setValue(dateToReplan).sendKeys(Keys.ESCAPE);
         $(withText("Запланировать")).click();
-        $("[data-test-id=replan-notification] button").click();
+        $("[data-test-id='replan-notification'] button").click();
         $(".notification__content")
                 .shouldHave(Condition.text(
                                 "Встреча успешно запланирована на " + dateToReplan),
