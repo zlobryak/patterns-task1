@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Old test replaced with new. Faker for random data.">
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="Some javadoc added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +17,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,8 +68,8 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath">
-    <configuration name="ChromeTest.shouldBookCardDeliveryHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement">
+    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -73,7 +82,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardDeliveryHappyPath&quot;" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -84,7 +93,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongCity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -97,7 +106,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath&quot;" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodWrongCity&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -108,7 +117,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="patterns-task1 [clean test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongDate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -119,19 +128,20 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
-            <option value="test" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodWrongDate&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="patterns-task1 [clen test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,29 +152,50 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clen" />
-            <option value="test" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodWrongName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="app-card-delivery.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/artifacts/app-card-delivery.jar" />
+    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodWrongPhone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodWrongPhone&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath" />
-        <item itemvalue="JAR Application.app-card-delivery.jar" />
-        <item itemvalue="Gradle.ChromeTest.shouldBookCardDeliveryHappyPath" />
-        <item itemvalue="Gradle.patterns-task1 [clean test]" />
-        <item itemvalue="Gradle.patterns-task1 [clen test]" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongAgreement" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongPhone" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongName" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongDate" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodWrongCity" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683666636405</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Some javadoc added">
+      <created>1683733152701</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683733152701</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -230,6 +268,7 @@
     <MESSAGE value="City generation added, Ё-problem found" />
     <MESSAGE value="User generation added" />
     <MESSAGE value="Old test replaced with new. Faker for random data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Old test replaced with new. Faker for random data." />
+    <MESSAGE value="Some javadoc added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some javadoc added" />
   </component>
 </project>
