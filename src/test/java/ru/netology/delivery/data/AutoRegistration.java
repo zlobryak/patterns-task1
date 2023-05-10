@@ -30,11 +30,11 @@ public class AutoRegistration {
      * @param dateToSetShift use int to shift from today
      * @return will return generated day for assertion
      */
-    public static String dateAutoFill(int dateToSetShift) {
+    public static String dateAutoFill(int dateToSetShift, String dateFormat) {
         $("[data-test-id='date'] input")
                 .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
                         Keys.BACK_SPACE);
-        String dateToSet = generateDate(dateToSetShift, "dd.MM.yyyy");
+        String dateToSet = generateDate(dateToSetShift, dateFormat);
         $(".calendar-input input")
                 .setValue(dateToSet).sendKeys(Keys.ESCAPE);
         return dateToSet;

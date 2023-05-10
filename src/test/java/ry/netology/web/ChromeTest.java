@@ -14,7 +14,6 @@ import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.delivery.data.DataGenerator.generateDate;
 
 public class ChromeTest {
-    // TODO Сделать проверку на букву ё
     @Test
     void shouldBookCardWithRegistrationMethodHappyPath() {
         Configuration.holdBrowserOpen = true;
@@ -22,7 +21,7 @@ public class ChromeTest {
         String dateToReplan = generateDate(5, "dd.MM.yyyy");
         open("http://localhost:9999/");
         AutoRegistration.cityAutoFill("random");
-        String dateToSet = AutoRegistration.dateAutoFill(dateToSetShift);
+        String dateToSet = AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
         AutoRegistration.nameAutoFill("random");
         AutoRegistration.phoneAtoFill("random");
         AutoRegistration.agreementAutoCheck(true);
@@ -58,7 +57,7 @@ public class ChromeTest {
         open("http://localhost:9999/");
 
         AutoRegistration.cityAutoFill("Мга");
-        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
         AutoRegistration.nameAutoFill("random");
         AutoRegistration.phoneAtoFill("random");
         AutoRegistration.agreementAutoCheck(true);
@@ -75,7 +74,7 @@ public class ChromeTest {
         open("http://localhost:9999/");
         int dateToSetShift = 1;
         AutoRegistration.cityAutoFill("random");
-        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
         AutoRegistration.nameAutoFill("random");
         AutoRegistration.phoneAtoFill("random");
         AutoRegistration.agreementAutoCheck(true);
@@ -91,7 +90,7 @@ public class ChromeTest {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
         AutoRegistration.cityAutoFill("random");
-        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
         AutoRegistration.nameAutoFill("111");
         AutoRegistration.phoneAtoFill("random");
         AutoRegistration.agreementAutoCheck(true);
@@ -108,7 +107,7 @@ public class ChromeTest {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
         AutoRegistration.cityAutoFill("random");
-        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
         AutoRegistration.nameAutoFill("random");
         AutoRegistration.phoneAtoFill("111");
         AutoRegistration.agreementAutoCheck(false);
@@ -123,7 +122,7 @@ public class ChromeTest {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
         AutoRegistration.cityAutoFill("random");
-        AutoRegistration.dateAutoFill(dateToSetShift);
+        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
         AutoRegistration.nameAutoFill("random");
         AutoRegistration.phoneAtoFill("111");
         AutoRegistration.agreementAutoCheck(true);
@@ -139,7 +138,7 @@ public class ChromeTest {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
         AutoRegistration.cityAutoFill("random");
-        String dateToSet = AutoRegistration.dateAutoFill(dateToSetShift);
+        String dateToSet = AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
         AutoRegistration.nameAutoFill("Фёдор Фёдорович");
         AutoRegistration.phoneAtoFill("random");
         AutoRegistration.agreementAutoCheck(true);
