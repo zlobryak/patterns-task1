@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="New class containing all the methods for autoFill">
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/ChromeTestBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/ChromeTestBot.java" afterDir="false" />
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="moving to another system">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,16 +16,6 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view />
-      </state>
-    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,7 +41,6 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;/home/alexander/Documents/Java/patterns-task1/src/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/alexander/Documents/Java/patterns-task1/artifacts&quot;
   }
@@ -67,8 +56,8 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongAgreement">
-    <configuration name="ChromeBotTest.shouldBookCardWithRegistrationMethodWrongAgreement" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath">
+    <configuration name="ChromeTest.shouldBookCardDeliveryHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -81,7 +70,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongAgreement&quot;" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardDeliveryHappyPath&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -92,7 +81,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="ChromeBotTest.shouldBookCardWithRegistrationMethodWrongCity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChromeTest.shouldBookCardWithRegistrationMethodHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -105,7 +94,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongCity&quot;" />
+            <option value="&quot;ry.netology.web.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -116,7 +105,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="ChromeBotTest.shouldBookCardWithRegistrationMethodWrongDate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="patterns-task1 [clean test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -127,20 +116,19 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongDate&quot;" />
+            <option value="clean" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="ChromeBotTest.shouldBookCardWithRegistrationMethodWrongName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="patterns-task1 [clen test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -151,50 +139,29 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongName&quot;" />
+            <option value="clen" />
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="ChromeBotTest.usingBotHappyPath" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeBotTest.usingBotHappyPath&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
+    <configuration name="app-card-delivery.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/artifacts/app-card-delivery.jar" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongAgreement" />
-        <item itemvalue="Gradle.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongName" />
-        <item itemvalue="Gradle.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongDate" />
-        <item itemvalue="Gradle.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongCity" />
-        <item itemvalue="Gradle.ChromeBotTest.usingBotHappyPath" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardWithRegistrationMethodHappyPath" />
+        <item itemvalue="Gradle.ChromeTest.shouldBookCardDeliveryHappyPath" />
+        <item itemvalue="Gradle.patterns-task1 [clean test]" />
+        <item itemvalue="JAR Application.app-card-delivery.jar" />
+        <item itemvalue="Gradle.patterns-task1 [clen test]" />
       </list>
     </recent_temporary>
   </component>
@@ -228,78 +195,56 @@
       <option name="project" value="LOCAL" />
       <updated>1683656397088</updated>
     </task>
-    <task id="LOCAL-00004" summary="Name, phone and data generation tested.">
-      <created>1683665745922</created>
+    <task id="LOCAL-00004" summary="Another dependencies fix">
+      <created>1683670850658</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1683665745922</updated>
+      <updated>1683670850659</updated>
     </task>
-    <task id="LOCAL-00005" summary="City generation added, Ё-problem found">
-      <created>1683666128071</created>
+    <task id="LOCAL-00005" summary="build.gradle fix">
+      <created>1683671509317</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1683666128071</updated>
+      <updated>1683671509317</updated>
     </task>
-    <task id="LOCAL-00006" summary="User generation added">
-      <created>1683666636405</created>
+    <task id="LOCAL-00006" summary="Minimum requirements">
+      <created>1683674058785</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1683666636405</updated>
+      <updated>1683674058785</updated>
     </task>
-    <task id="LOCAL-00007" summary="Some javadoc added">
-      <created>1683733152701</created>
+    <task id="LOCAL-00007" summary="Quick fix (apostrophe for [data-test-id='replan-notification'] button)">
+      <created>1683710639559</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1683733152701</updated>
+      <updated>1683710639560</updated>
     </task>
-    <task id="LOCAL-00008" summary="Working tests only">
-      <created>1683735259381</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1683735259381</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Filed build. Test for wrong phone name and name with &quot;Ё&quot; letter added.">
-      <created>1683736558593</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1683736558593</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Static modification added to methods in AutoRegistration.javagistration">
-      <created>1683744976176</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1683744976176</updated>
-    </task>
-    <task id="LOCAL-00011" summary="New class containing all the methods for autoFill">
-      <created>1683747289574</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1683747289574</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Project files, SUT and configurations" />
     <MESSAGE value="Old tests for new DataGenerator added" />
-    <MESSAGE value="Name, phone and data generation tested." />
-    <MESSAGE value="City generation added, Ё-problem found" />
-    <MESSAGE value="User generation added" />
-    <MESSAGE value="Old test replaced with new. Faker for random data." />
-    <MESSAGE value="Some javadoc added" />
-    <MESSAGE value="Working tests only" />
-    <MESSAGE value="Filed build. Test for wrong phone name and name with &quot;Ё&quot; letter added." />
-    <MESSAGE value="Static modification added to methods in AutoRegistration.javagistration" />
-    <MESSAGE value="New class containing all the methods for autoFill" />
-    <option name="LAST_COMMIT_MESSAGE" value="New class containing all the methods for autoFill" />
+    <MESSAGE value="Another dependencies fix" />
+    <MESSAGE value="build.gradle fix" />
+    <MESSAGE value="Minimum requirements" />
+    <MESSAGE value="Quick fix (apostrophe for [data-test-id='replan-notification'] button)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick fix (apostrophe for [data-test-id='replan-notification'] button)" />
   </component>
 </project>
