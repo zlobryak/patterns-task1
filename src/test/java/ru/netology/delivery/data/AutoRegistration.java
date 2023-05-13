@@ -66,7 +66,7 @@ public class AutoRegistration {
 
     /**
      * @param agreement Use true or false To check the box,
-     *                 or false not to tick
+     *                  or false not to tick
      */
     public static void agreementAutoCheck(boolean agreement) {
         if (agreement) {
@@ -74,7 +74,7 @@ public class AutoRegistration {
         }
     }
 
-    public static void pushTheButton(String buttonText){
+    public static void pushTheButton(String buttonText) {
         $$(".button__text").findBy(Condition.text(buttonText)).click();
     }
 }

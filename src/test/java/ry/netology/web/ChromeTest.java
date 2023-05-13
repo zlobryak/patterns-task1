@@ -143,7 +143,10 @@ public class ChromeTest {
         AutoRegistration.pushTheButton("Запланировать");
 
         $(".notification__content")
-                .shouldNotHave(Condition.text("Встреча успешно запланирована на " ));
+                .shouldNotHave(Condition.text(
+                                "Встреча успешно запланирована на "),
+                        Duration.ofSeconds(15)
+                );
         $("[data-test-id='phone'] ,input-sub")
                 .shouldHave(Condition.text(
                         "Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.")
