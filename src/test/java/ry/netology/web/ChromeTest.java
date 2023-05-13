@@ -2,6 +2,7 @@ package ry.netology.web;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import ru.netology.delivery.data.AutoRegistration;
@@ -15,6 +16,7 @@ import static ru.netology.delivery.data.DataGenerator.generateDate;
 
 public class ChromeTest {
     @Test
+    @DisplayName("Should successfully book the card with given date and then rebook it with new date")
     void shouldBookCardWithRegistrationMethodHappyPath() {
         Configuration.holdBrowserOpen = true;
         int dateToSetShift = 4;
@@ -52,7 +54,8 @@ public class ChromeTest {
     }
 
     @Test
-    void shouldBookCardWithRegistrationMethodWrongCity() {
+    @DisplayName("Should get error message if book with wrong city name")
+    void WrongCityMessageTest() {
         int dateToSetShift = 1;
         open("http://localhost:9999/");
 
@@ -70,7 +73,8 @@ public class ChromeTest {
     }
 
     @Test
-    void shouldBookCardWithRegistrationMethodWrongDate() {
+    @DisplayName("Should get error message if book with wrong date")
+    void WrongDateMessageTest() {
         open("http://localhost:9999/");
         int dateToSetShift = 1;
         AutoRegistration.cityAutoFill("random");
@@ -86,7 +90,8 @@ public class ChromeTest {
                 .shouldBe(Condition.visible);
     }
     @Test
-    void shouldBookCardWithRegistrationMethodWrongName() {
+    @DisplayName("Should get error message if book with wrong name ")
+    void WrongNameMessageTest() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
         AutoRegistration.cityAutoFill("random");
@@ -102,7 +107,9 @@ public class ChromeTest {
                 .shouldBe(Condition.visible);
     }
     @Test
-    void shouldBookCardWithRegistrationMethodWrongAgreement() {
+    @DisplayName("The color of the text of agreement should be red. " +
+            "There should be no message that the operation completed successfully.")
+    void AgreementNotSetTest() {
         Configuration.holdBrowserOpen = true;
         open("http://localhost:9999/");
         int dateToSetShift = 3;
@@ -113,12 +120,19 @@ public class ChromeTest {
         AutoRegistration.agreementAutoCheck(false);
         AutoRegistration.pushTheButton("Запланировать");
         $(".input_invalid").shouldHave(cssValue("color", "rgba(255, 92, 92, 1)"));
+        $(".notification__content")
+                .shouldNotHave(Condition.text(
+                                "Встреча успешно запланирована на "),
+                        Duration.ofSeconds(15)
+                );
+
     }
 
     // Тесты, которые выявили баги
 
     @Test
-    void shouldBookCardWithRegistrationMethodWrongPhone() {
+    @DisplayName("Should get error message if book with wrong phone number ")
+    void WrongPhoneMessageTest() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
         AutoRegistration.cityAutoFill("random");
@@ -134,7 +148,8 @@ public class ChromeTest {
                 .shouldBe(Condition.visible);
     }
     @Test
-    void shouldBookCardWithRegistrationMethodWrongLettersInTheName() {
+    @DisplayName("Should successfully book the card with name that contains Yo letter")
+    void shouldBookCardWithLetterYo() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
         AutoRegistration.cityAutoFill("random");
@@ -147,8 +162,8 @@ public class ChromeTest {
                 .shouldHave(Condition.text(
                                 "Встреча успешно запланирована на " + dateToSet),
                         Duration.ofSeconds(15)
-                )
-                .shouldBe(Condition.visible);
+                );
+
     }
 
 }

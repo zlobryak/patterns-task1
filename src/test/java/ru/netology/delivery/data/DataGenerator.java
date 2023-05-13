@@ -25,22 +25,18 @@ public class DataGenerator {
     }
 
     public static String generateCity(String locale) {
-        // TODO: добавить логику для объявления переменной city
-        //  и задания её значения, генерацию можно выполнить
-        // с помощью Faker, либо используя массив валидных
-        // городов и класс Random
         faker = new Faker(new Locale(locale));
-        return String.valueOf(faker.address().city());
+        return faker.address().city();
     }
 
     public static String generateName(String locale) {
         faker = new Faker(new Locale(locale));
-        return String.valueOf(faker.name().fullName());
+        return faker.name().fullName();
     }
 
     public static String generatePhone(String locale) {
         faker = new Faker(new Locale(locale));
-        return String.valueOf(faker.phoneNumber().phoneNumber());
+        return faker.phoneNumber().phoneNumber();
     }
 
     public static class Registration {

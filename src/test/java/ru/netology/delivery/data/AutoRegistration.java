@@ -3,8 +3,6 @@ package ru.netology.delivery.data;
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.Keys;
 
-import java.util.Objects;
-
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -16,7 +14,7 @@ public class AutoRegistration {
      * @param city Use String "random" to generate
      */
     public static void cityAutoFill(String city) {
-        if (Objects.equals(city, "random")) {
+        if (city.equals("random")) {
 
             $("[data-test-id=city] input")
                     .sendKeys(generateUser("ru").getCity());
@@ -44,7 +42,7 @@ public class AutoRegistration {
      * @param name Use String "random" to generate
      */
     public static void nameAutoFill(String name) {
-        if (Objects.equals(name, "random")) {
+        if (name.equals("random")) {
             $("[data-test-id=name] input")
                     .setValue(generateUser("ru").getName());
         } else {
@@ -57,7 +55,7 @@ public class AutoRegistration {
      * @param phone Use String "random" to generate
      */
     public static void phoneAtoFill(String phone) {
-        if (Objects.equals(phone, "random")) {
+        if (phone.equals("random")) {
             $("[data-test-id=phone] input")
                     .setValue(generateUser("ru").getPhone());
         } else {
