@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="New class containing all the methods for autoFill">
+    <list default="true" id="c5b605ba-49aa-43e1-a171-a425a5a174dd" name="Changes" comment="moving to another system">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/AutoRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/ChromeTestBot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/delivery/data/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeBotTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ry/netology/web/ChromeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +73,7 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.patterns-task1 [clean test]">
+  <component name="RunManager" selected="Gradle.ChromeTest.WrongPhoneMessageTest">
     <configuration name="ChromeBotTest.shouldBookCardWithRegistrationMethodWrongAgreement" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -102,30 +98,6 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="ChromeBotTest.shouldBookCardWithRegistrationMethodWrongName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ry.netology.web.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongName&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <configuration name="ChromeTest.AgreementNotSetTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -140,6 +112,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ry.netology.web.ChromeTest.AgreementNotSetTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="ChromeTest.WrongPhoneMessageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ry.netology.web.ChromeTest.WrongPhoneMessageTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -179,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ChromeTest.WrongPhoneMessageTest" />
         <item itemvalue="Gradle.patterns-task1 [clean test]" />
         <item itemvalue="Gradle.ChromeTest.AgreementNotSetTest" />
         <item itemvalue="JAR Application.app-card-delivery.jar" />
         <item itemvalue="Gradle.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongAgreement" />
-        <item itemvalue="Gradle.ChromeBotTest.shouldBookCardWithRegistrationMethodWrongName" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683747289574</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="moving to another system">
+      <created>1684015420618</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684015420618</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -289,6 +292,7 @@
     <MESSAGE value="Filed build. Test for wrong phone name and name with &quot;Ё&quot; letter added." />
     <MESSAGE value="Static modification added to methods in AutoRegistration.javagistration" />
     <MESSAGE value="New class containing all the methods for autoFill" />
-    <option name="LAST_COMMIT_MESSAGE" value="New class containing all the methods for autoFill" />
+    <MESSAGE value="moving to another system" />
+    <option name="LAST_COMMIT_MESSAGE" value="moving to another system" />
   </component>
 </project>
