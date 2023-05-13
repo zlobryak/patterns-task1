@@ -5,29 +5,97 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-import ru.netology.delivery.data.AutoRegistration;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.cssValue;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selectors.withText;
+import static com.codeborne.selenide.Selenide.*;
+import static ru.netology.delivery.data.DataGenerator.Registration.generateUser;
 import static ru.netology.delivery.data.DataGenerator.generateDate;
 
 public class ChromeTest {
+
+    /**
+     * @param city Use String "random" to generate
+     */
+    public static void cityAutoFill(String city) {
+        if (city.equals("random")) {
+
+            $("[data-test-id=city] input")
+                    .sendKeys(generateUser("ru").getCity());
+        } else {
+            $("[data-test-id=city] input")
+                    .sendKeys(city);
+        }
+    }
+
+    /**
+     * @param dateToSetShift use int to shift from today
+     * @return will return generated day for assertion
+     */
+    public static String dateAutoFill(int dateToSetShift, String dateFormat) {
+        $("[data-test-id='date'] input")
+                .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
+                        Keys.BACK_SPACE);
+        String dateToSet = generateDate(dateToSetShift, dateFormat);
+        $(".calendar-input input")
+                .setValue(dateToSet).sendKeys(Keys.ESCAPE);
+        return dateToSet;
+    }
+
+    /**
+     * @param name Use String "random" to generate
+     */
+    public static void nameAutoFill(String name) {
+        if (name.equals("random")) {
+            $("[data-test-id=name] input")
+                    .setValue(generateUser("ru").getName());
+        } else {
+            $("[data-test-id=name] input")
+                    .setValue(name);
+        }
+    }
+
+    /**
+     * @param phone Use String "random" to generate
+     */
+    public static void phoneAtoFill(String phone) {
+        if (phone.equals("random")) {
+            $("[data-test-id=phone] input")
+                    .setValue(generateUser("ru").getPhone());
+        } else {
+            $("[data-test-id=phone] input")
+                    .setValue(phone);
+        }
+    }
+
+    /**
+     * @param agreement Use true or false To check the box,
+     *                  or false not to tick
+     */
+    public static void agreementAutoCheck(boolean agreement) {
+        if (agreement) {
+            $(withText("соглашаюсь")).click();
+        }
+    }
+
+    public static void pushTheButton(String buttonText) {
+        $$(".button__text").findBy(Condition.text(buttonText)).click();
+    }
     @Test
     @DisplayName("Should successfully book the card with given date and then rebook it with new date")
     void shouldBookCardWithRegistrationMethodHappyPath() {
-        Configuration.holdBrowserOpen = true;
+//        Configuration.holdBrowserOpen = true;
         int dateToSetShift = 4;
-        String dateToReplan = generateDate(5, "dd.MM.yyyy");
+        String dateToRebook = generateDate(5, "dd.MM.yyyy");
         open("http://localhost:9999/");
-        AutoRegistration.cityAutoFill("random");
-        String dateToSet = AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
-        AutoRegistration.nameAutoFill("random");
-        AutoRegistration.phoneAtoFill("random");
-        AutoRegistration.agreementAutoCheck(true);
-        AutoRegistration.pushTheButton("Запланировать");
+        cityAutoFill("random");
+        String dateToSet = dateAutoFill(dateToSetShift, "dd.MM.yyyy");
+        nameAutoFill("random");
+        phoneAtoFill("random");
+        agreementAutoCheck(true);
+        pushTheButton("Запланировать");
 
         $(".notification__content")
                 .shouldHave(Condition.text(
@@ -40,14 +108,14 @@ public class ChromeTest {
                 .sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME),
                         Keys.BACK_SPACE);
         $(".calendar-input input")
-                .setValue(dateToReplan).sendKeys(Keys.ESCAPE);
+                .setValue(dateToRebook).sendKeys(Keys.ESCAPE);
 
-        AutoRegistration.pushTheButton("Запланировать");
-        AutoRegistration.pushTheButton("Перепланировать");
+        pushTheButton("Запланировать");
+        pushTheButton("Перепланировать");
 
         $(".notification__content")
                 .shouldHave(Condition.text(
-                                "Встреча успешно запланирована на " + dateToReplan),
+                                "Встреча успешно запланирована на " + dateToRebook),
                         Duration.ofSeconds(15)
                 )
                 .shouldBe(Condition.visible);
@@ -58,13 +126,12 @@ public class ChromeTest {
     void WrongCityMessageTest() {
         int dateToSetShift = 1;
         open("http://localhost:9999/");
-
-        AutoRegistration.cityAutoFill("Мга");
-        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
-        AutoRegistration.nameAutoFill("random");
-        AutoRegistration.phoneAtoFill("random");
-        AutoRegistration.agreementAutoCheck(true);
-        AutoRegistration.pushTheButton("Запланировать");
+        cityAutoFill("Мга");
+        dateAutoFill(dateToSetShift, "dd.MM.yyyy");
+        nameAutoFill("random");
+        phoneAtoFill("random");
+        agreementAutoCheck(true);
+        pushTheButton("Запланировать");
         $("[data-test-id='city'] ,input-sub")
                 .shouldHave(Condition.text(
                         "Доставка в выбранный город недоступна")
@@ -77,12 +144,12 @@ public class ChromeTest {
     void WrongDateMessageTest() {
         open("http://localhost:9999/");
         int dateToSetShift = 1;
-        AutoRegistration.cityAutoFill("random");
-        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
-        AutoRegistration.nameAutoFill("random");
-        AutoRegistration.phoneAtoFill("random");
-        AutoRegistration.agreementAutoCheck(true);
-        AutoRegistration.pushTheButton("Запланировать");
+        cityAutoFill("random");
+        dateAutoFill(dateToSetShift, "dd.MM.yyyy");
+        nameAutoFill("random");
+        phoneAtoFill("random");
+        agreementAutoCheck(true);
+        pushTheButton("Запланировать");
         $("[data-test-id='date']")
                 .shouldHave(Condition.text(
                         "Заказ на выбранную дату невозможен")
@@ -94,12 +161,12 @@ public class ChromeTest {
     void WrongNameMessageTest() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
-        AutoRegistration.cityAutoFill("random");
-        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
-        AutoRegistration.nameAutoFill("111");
-        AutoRegistration.phoneAtoFill("random");
-        AutoRegistration.agreementAutoCheck(true);
-        AutoRegistration.pushTheButton("Запланировать");
+        cityAutoFill("random");
+        dateAutoFill(dateToSetShift, "dd.MM.yyyy");
+        nameAutoFill("111");
+        phoneAtoFill("random");
+        agreementAutoCheck(true);
+        pushTheButton("Запланировать");
         $("[data-test-id='name'] ,input-sub")
                 .shouldHave(Condition.text(
                         "Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.")
@@ -113,12 +180,12 @@ public class ChromeTest {
         Configuration.holdBrowserOpen = true;
         open("http://localhost:9999/");
         int dateToSetShift = 3;
-        AutoRegistration.cityAutoFill("random");
-        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
-        AutoRegistration.nameAutoFill("random");
-        AutoRegistration.phoneAtoFill("111");
-        AutoRegistration.agreementAutoCheck(false);
-        AutoRegistration.pushTheButton("Запланировать");
+        cityAutoFill("random");
+        dateAutoFill(dateToSetShift, "dd.MM.yyyy");
+        nameAutoFill("random");
+        phoneAtoFill("111");
+        agreementAutoCheck(false);
+        pushTheButton("Запланировать");
         $(".input_invalid").shouldHave(cssValue("color", "rgba(255, 92, 92, 1)"));
         $(".notification__content")
                 .shouldNotHave(Condition.text(
@@ -135,12 +202,12 @@ public class ChromeTest {
     void WrongPhoneMessageTest() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
-        AutoRegistration.cityAutoFill("random");
-        AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
-        AutoRegistration.nameAutoFill("random");
-        AutoRegistration.phoneAtoFill("111");
-        AutoRegistration.agreementAutoCheck(true);
-        AutoRegistration.pushTheButton("Запланировать");
+        cityAutoFill("random");
+        dateAutoFill(dateToSetShift, "dd.MM.yyyy");
+        nameAutoFill("random");
+        phoneAtoFill("111");
+        agreementAutoCheck(true);
+        pushTheButton("Запланировать");
 
         $(".notification__content")
                 .shouldNotHave(Condition.text(
@@ -158,12 +225,12 @@ public class ChromeTest {
     void shouldBookCardWithLetterYo() {
         open("http://localhost:9999/");
         int dateToSetShift = 3;
-        AutoRegistration.cityAutoFill("random");
-        String dateToSet = AutoRegistration.dateAutoFill(dateToSetShift, "dd.MM.yyyy");
-        AutoRegistration.nameAutoFill("Фёдор Фёдорович");
-        AutoRegistration.phoneAtoFill("random");
-        AutoRegistration.agreementAutoCheck(true);
-        AutoRegistration.pushTheButton("Запланировать");
+        cityAutoFill("random");
+        String dateToSet = dateAutoFill(dateToSetShift, "dd.MM.yyyy");
+        nameAutoFill("Фёдор Фёдорович");
+        phoneAtoFill("random");
+        agreementAutoCheck(true);
+        pushTheButton("Запланировать");
         $(".notification__content")
                 .shouldHave(Condition.text(
                                 "Встреча успешно запланирована на " + dateToSet),
